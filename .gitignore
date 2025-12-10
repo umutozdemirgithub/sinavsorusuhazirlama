@@ -1,0 +1,16 @@
+# Streamlit secrets (ŞİFRELERİN OLDUĞU DOSYA - ÇOK ÖNEMLİ)
+.streamlit/secrets.toml
+
+# Python cache dosyaları (Gereksiz kalabalık)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Sanal ortam klasörleri (Varsa)
+venv/
+.env
+.venv/
+env/
+
+# İşletim sistemi dosyaları
+.DS_Store
