@@ -250,10 +250,10 @@ class DatabaseManager:
                     Photo TEXT
                 )
             """)
-            if not cursor.execute("SELECT 1 FROM users WHERE Username = 'admin'").fetchone():
+            if not cursor.execute("SELECT 1 FROM users WHERE Username = 'patron'").fetchone():
                 cursor.execute("INSERT INTO users (Username, Password, Role, FullName) VALUES (?, ?, ?, ?)", 
-                               ('admin', hash_password('admin'), 'Admin', 'Sistem Yöneticisi'))
-            
+                            ('patron', hash_password('12345'), 'Admin', 'Sistem Yöneticisi'))
+                        
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS questions (
                     QuestionID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -680,11 +680,7 @@ def login_page():
                 else:
                     st.error("❌ Hatalı kullanıcı adı veya şifre!")
         
-        st.markdown("""
-        <div style="text-align:center; margin-top:20px; color:#9CA3AF; font-size:12px;">
-            Demo Hesabı: admin / admin
-        </div>
-        """, unsafe_allow_html=True)
+
 
 def dashboard_page():
     user = st.session_state['user']
