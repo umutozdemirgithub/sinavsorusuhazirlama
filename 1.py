@@ -444,7 +444,7 @@ class AIGenerator:
             response_text = ""
             if provider == "google":
                 genai.configure(api_key=api_key)
-                model = genai.GenerativeModel('gemini-pro')
+                model = genai.GenerativeModel('gemini-1.5-flash')
                 response = model.generate_content(prompt)
                 response_text = response.text
             elif provider == "openai":
@@ -1259,4 +1259,5 @@ def main():
     elif selected == "Yönetim": admin_page()
 
 if __name__ == "__main__":
+
     main()
