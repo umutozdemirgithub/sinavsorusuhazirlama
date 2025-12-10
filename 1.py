@@ -51,12 +51,7 @@ try:
     genai.configure(api_key=api_key)
 except Exception:
     pass 
-try:
-    st.info("🔍 API Bağlantı Testi...")
-    available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
-    st.write("Kullanılabilir Modeller:", available_models)
-except Exception as e:
-    st.error(f"API Anahtarı Hatası: {e}")
+
 # ==============================================================================
 # 1. AYARLAR VE TASARIM (MODERN UI UPDATE)
 # ==============================================================================
@@ -449,7 +444,7 @@ class AIGenerator:
             response_text = ""
             if provider == "google":
                 genai.configure(api_key=api_key)
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                model = genai.GenerativeModel('gemini-2.5-pro')
                 response = model.generate_content(prompt)
                 response_text = response.text
             elif provider == "openai":
@@ -1266,4 +1261,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
