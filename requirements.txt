@@ -4,6 +4,8 @@ pandas
 fpdf
 plotly
 xlsxwriter
+openpyxl
 python-docx
 bcrypt
 streamlit-option-menu
+
