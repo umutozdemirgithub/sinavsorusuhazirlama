@@ -1404,7 +1404,6 @@ def login_page():
                     st.rerun()
                 else:
                     st.error("Hatalı kullanıcı adı veya şifre!")
-        st.info("Demo: admin / admin")
 
 def dashboard_page():
     user = st.session_state['user']
@@ -3502,4 +3501,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
