@@ -86,8 +86,8 @@ OPTION_KEY_REGEX = r'^[A-Za-z]$'
 MENU_ROLES = {
     "Gösterge Paneli": ["Admin", "Öğretim Üyesi"],
     "Dersler": ["Admin", "Öğretim Üyesi"],
-    "Soru Bankası": ["Admin", "Öğretim Üyesi"],
     "Soru Ekle": ["Admin", "Öğretim Üyesi"],
+    "Soru Bankası": ["Admin", "Öğretim Üyesi"],
     "Sınav Oluştur": ["Admin", "Öğretim Üyesi"],
     "Arşiv": ["Admin", "Öğretim Üyesi"],
     "Yönetim": ["Admin"],
@@ -2923,10 +2923,10 @@ def route_page(selected):
         dashboard_page()
     elif selected == "Dersler":
         course_management_page()
-    elif selected == "Soru Bankası":
-        question_bank_page()
     elif selected == "Soru Ekle":
         add_question_page()
+    elif selected == "Soru Bankası":
+        question_bank_page()
     elif selected == "Sınav Oluştur":
         exam_create_page()
     elif selected == "Arşiv":
@@ -3487,8 +3487,8 @@ def main():
     menu_icons = {
         "Gösterge Paneli": "speedometer2",
         "Dersler": "journal-bookmark-fill", 
-        "Soru Bankası": "collection",
         "Soru Ekle": "plus-circle",
+        "Soru Bankası": "collection",
         "Sınav Oluştur": "file-earmark-text",
         "Arşiv": "archive",
         "Yönetim": "gear"
@@ -3501,5 +3501,4 @@ def main():
 
 
 if __name__ == "__main__":
-
     main()
